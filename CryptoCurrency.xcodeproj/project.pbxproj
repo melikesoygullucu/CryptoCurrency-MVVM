@@ -13,6 +13,8 @@
 		4D91FC6C2C69E23F00B815D9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D91FC6A2C69E23F00B815D9 /* Main.storyboard */; };
 		4D91FC6E2C69E24000B815D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D91FC6D2C69E24000B815D9 /* Assets.xcassets */; };
 		4D91FC712C69E24000B815D9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D91FC6F2C69E24000B815D9 /* LaunchScreen.storyboard */; };
+		4D91FC7D2C69E66C00B815D9 /* Crypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D91FC7C2C69E66C00B815D9 /* Crypto.swift */; };
+		4D91FC7F2C69EA4500B815D9 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D91FC7E2C69EA4500B815D9 /* WebService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		4D91FC6D2C69E24000B815D9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4D91FC702C69E24000B815D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4D91FC722C69E24000B815D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4D91FC7C2C69E66C00B815D9 /* Crypto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crypto.swift; sourceTree = "<group>"; };
+		4D91FC7E2C69EA4500B815D9 /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +60,49 @@
 		4D91FC632C69E23F00B815D9 /* CryptoCurrency */ = {
 			isa = PBXGroup;
 			children = (
-				4D91FC642C69E23F00B815D9 /* AppDelegate.swift */,
-				4D91FC662C69E23F00B815D9 /* SceneDelegate.swift */,
-				4D91FC682C69E23F00B815D9 /* ViewController.swift */,
+				4D91FC792C69E62C00B815D9 /* Service */,
+				4D91FC782C69E62300B815D9 /* Model */,
+				4D91FC7B2C69E63A00B815D9 /* ViewModel */,
+				4D91FC7A2C69E63100B815D9 /* View */,
 				4D91FC6A2C69E23F00B815D9 /* Main.storyboard */,
 				4D91FC6D2C69E24000B815D9 /* Assets.xcassets */,
 				4D91FC6F2C69E24000B815D9 /* LaunchScreen.storyboard */,
 				4D91FC722C69E24000B815D9 /* Info.plist */,
 			);
 			path = CryptoCurrency;
+			sourceTree = "<group>";
+		};
+		4D91FC782C69E62300B815D9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4D91FC7C2C69E66C00B815D9 /* Crypto.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4D91FC792C69E62C00B815D9 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				4D91FC7E2C69EA4500B815D9 /* WebService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		4D91FC7A2C69E63100B815D9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4D91FC642C69E23F00B815D9 /* AppDelegate.swift */,
+				4D91FC662C69E23F00B815D9 /* SceneDelegate.swift */,
+				4D91FC682C69E23F00B815D9 /* ViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4D91FC7B2C69E63A00B815D9 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,8 +176,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D91FC7D2C69E66C00B815D9 /* Crypto.swift in Sources */,
 				4D91FC692C69E23F00B815D9 /* ViewController.swift in Sources */,
 				4D91FC652C69E23F00B815D9 /* AppDelegate.swift in Sources */,
+				4D91FC7F2C69EA4500B815D9 /* WebService.swift in Sources */,
 				4D91FC672C69E23F00B815D9 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
