@@ -10,6 +10,7 @@ import UIKit
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var tableView: UITableView!
+    var cryptoList = [Crypto]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,17 +18,18 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         tableView.delegate = self
         tableView.dataSource = self
+        
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return cryptoList.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
         var content = cell.defaultContentConfiguration()
-        content.text = "Crypto Currency"
-        content.secondaryText = "Crypto Price"
+        content.text = cryptoList[indexPath.row].currency
+        content.secondaryText = cryptoList[indexPath.row].price
         cell.contentConfiguration = content
         return cell
     }
